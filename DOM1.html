@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+        <title>Bonjour le monde </title>
+    </head>
+    <body>
+        <script>
+        var text = "ma variable globale";
+        (function (){
+            var text = "ma variable locale";
+            alert(text);//la variable locale prend la main
+            alert(window.text);//la variable globale devient visible grâce à l'objet window
+        })();
+        </script>
+    </body>
+</html>
