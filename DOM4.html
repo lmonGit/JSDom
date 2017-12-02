@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+        <title>DOM Access </title>
+    </head>
+    <body>
+        <div id="menu">
+            
+             <div class ="item">
+             <span >Êlément 1</span >
+             <span >Êlément 2</span >
+             <span >Êlément 3</span >
+             <span >Êlément 4</span >   
+             </div >
+            
+             <div class ="publicite">
+             <span >Êlément 5</span >
+             <span >Êlément 6</span >
+             </div >
+            
+        </div >
+            
+             <div id="contenu">
+             <span > Introduction au contenu de la page ... </span >
+             </div >
+        <script>
+            var query = document . querySelector ('#menu .item span'),
+            queryAll = document . querySelectorAll ('#menu .item span');
+
+            alert ("valeur du premier élément ayant pour critères #menu .item span : " + query.innerHTML); // Affiche : "Êlément 1"
+
+            alert ("nombre d'éléments ayant pour critères #menu .item span : " + queryAll.length ); // Affiche : "4"
+            alert ("valeurs des éléments ayant pour critères #menu .item span :" +  queryAll[0].innerHTML + ' - ' + queryAll[1].innerHTML + ' - ' + queryAll[2].innerHTML + ' - '+ queryAll[3].innerHTML);    
+        </script>
+    </body>
+</html>
