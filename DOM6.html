@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+        <title>DOM Attribute</title>
+    </head>
+    <body>
+        <a id="myLink" href ="https://www.contrepoints.org/">Un lien modifié dynamiquement</a>
+        <script>
+            var link = document.getElementById ('myLink');
+            var href = link.href;
+            alert(href);
+            link . href = 'http://www.lemonde.fr/';
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+        <title>DOM Attribute</title>
+    </head>
+    <body>
+        <a id="myLink" href ="https://www.contrepoints.org/">Un lien modifié dynamiquement</a>
+        <script>
+            var link = document.getElementById ('myLink');
+            var href = link.getAttribute('href'); // On récupère l'attribut  href
+                alert(href);
+                link.setAttribute('href','http://lesmoutonsrebelles.com/'); 
+                //On é dite l'attribut  href
+        </script>
+    </body>
+</html>

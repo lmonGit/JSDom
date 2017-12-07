@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>DOM class</title>
+        <style type="text/css">
+            .blue{
+             background:rgb(42, 3, 114) ;
+             color:#ffcc66;
+             }
+             .wavy{
+                text-decoration-line: underline;
+                text-decoration-style: wavy;
+                text-decoration-color:red;
+             }
+             .fontFam{
+                font-family:"Brush Script MT";
+                font-size:3em;
+             }
+        </style>
+    </head>
+    <body> 
+            <div id="myDiv">
+                <p>Un peu de texte <a>et un lien </a ></p>
+            </div>
+            
+            <script >
+                var div = document.getElementById('myDiv');
+                var txt = '';
+
+                /*if (div.textContent) { //  textContent  existe ? Alors  s'en sert !
+                txt = div.textContent + "Le navigateur n'est pas IE ou une version 9 ou plus ";
+
+                } else if(div.innerText) { //  innerText  existe ? Alors on doit être sous IE.
+                txt = div.innerText + ' Le navigateur est Internet Explorer version 8 ou moins ';
+                } else { // Si aucun des deux n'existe , cela est sûrement  au fait qu 'il n'y a pas de texte
+                txt = 'Absence de Saisie '; // On met une chaîne de caractères vide
+                }*/
+                txt = div. textContent || div. innerText || 'Absence de Saisie';
+                if (div.textContent) { //  textContent  existe ? Alors  s'en sert !
+                txt = div.textContent + "Le navigateur n'est pas IE ou une version 9 ou plus ";
+
+                } else if(div.innerText) { //  innerText  existe ? Alors on doit être sous IE.
+                txt = div.innerText + ' Le navigateur est Internet Explorer version 8 ou moins ';
+                } 
+                alert (txt);
+            </script>
+    </body>
+</html>

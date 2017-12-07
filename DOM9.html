@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>DOM class</title>
+        <style type="text/css">
+            .blue{
+             background:rgb(42, 3, 114) ;
+             color:#ffcc66;
+             }
+             .wavy{
+                text-decoration-line: underline;
+                text-decoration-style: wavy;
+                text-decoration-color:red;
+             }
+             .fontFam{
+                font-family:"Brush Script MT";
+                font-size:3em;
+             }
+        </style>
+    </head>
+    <body> 
+            <div id="myDiv">
+                <p>Un peu de texte <a>et un lien </a ></p>
+            </div>
+            
+            <script>
+                document.getElementById ('myDiv').className = 'blue wavy fontFam'; 
+                //Edition de myDiv qui est modifié  
+                document.getElementById('myDiv').innerHTML = '<blockquote >Plus l\'espérance est grande, plus la déception est violente. Franz-Olivier Giesbert </blockquote >';
+                alert(myDiv.innerHTML);
+            </script>
+    </body>
+</html>

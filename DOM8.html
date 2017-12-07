@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>DOM class</title>
+        <style type="text/css">
+            .blue{
+             background:rgb(42, 3, 114) ;
+             color:#ffcc66;
+             }
+             .wavy{
+                text-decoration-line: underline;
+                text-decoration-style: wavy;
+                text-decoration-color:red;
+             }
+             .fontFam{
+                font-family:"Brush Script MT";
+                font-size:3em;
+             }
+        </style>
+    </head>
+    <body>
+            <div id="myDiv">
+                <p>Un peu de texte <a>et un lien </a ></p>
+            </div>
+            
+            <script>
+            var div = document.getElementById('myDiv');
+            
+            alert (div.innerHTML);
+            </script>
+    </body>
+</html>
